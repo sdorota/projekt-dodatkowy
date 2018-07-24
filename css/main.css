@@ -1,0 +1,352 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding: 0;
+    top: 0;
+    font-family: 'Roboto', sans-serif;
+}
+/* nawigacia + header -> start */
+#main-nav,
+#main-nav ul,
+#header,
+#header h1 {
+    background-color: #87509c;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+#main-nav ul {
+    display: flex;
+    text-transform: uppercase;
+    justify-content: flex-end;
+}
+#main-nav ul .menu-item {
+    padding: 10px;
+    list-style: none;
+}
+#main-nav ul .menu-item a {
+text-decoration: none;
+color: white;
+}
+#main-nav ul .menu-item:hover {
+    background-color: #643a79;
+    border: 1px solid #643a79;
+    border-radius: 5px;
+    padding: 8px;
+}
+#header {
+    text-align: center;
+    height: 50vh;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+#top-button {
+    width: 200px;
+    height: 50px;
+    align-self: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #eb7d4b;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px #bb6552;
+    text-transform: uppercase;
+}
+#top-button:hover {
+    background-color: #a3480b;
+}
+#top-button:active {
+    background-color: #a3480b;
+    box-shadow: 0 5px #ae6065;
+    transform: translateY(4px);
+}
+/* nawigacja + header -> end*/
+
+/* section team -> start */
+
+#team {
+    height: 200%;
+    color: #5e697f;
+    background-color:#e7f1f8;
+}
+#team #team-text h2,
+#skills #skills-text h2,
+#opinion h2,
+#form h2 {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+}
+h3 {
+    text-transform: uppercase;
+}
+hr {
+    width: 10%;
+    height: 3px;
+    background: grey;
+    border: 0;
+}
+#team #team-text p, 
+#skills #skills-text p{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+#team-photos {
+    display: flex; 
+    justify-content: center;
+    margin: 10px 20px;
+    flex-wrap: wrap;
+    
+}
+#team-photos .photos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+  
+}
+#team-photos .photos .all-photos {
+    border-radius: 50%; 
+    width: 200px;
+    height: 200px;
+    border: 1px transparent;
+    background-position: center;  
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#team-photos .photos #photo1 {
+    background-image: url(../img/Anne-Hathaway.jpg);
+}
+#team-photos .photos #photo2 {
+    background-image: url(../img/kate-upton.jpg);
+}
+#team-photos .photos #photo3 {
+    background-image: url(../img/Olivia_WIlde.jpg);
+}
+#team-photos .photos #photo4 {
+    background-image: url(../img/Ashley-Greene.jpg);
+}
+#team-photos p {
+    text-align: center;
+}
+.photos a {
+    color: blue;
+}
+.social-media a{
+    color: #fff;
+    background-color: #bdd1df;
+    border: 1px solid #bdd1df;
+    border-radius: 50%;
+    margin: 5px;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    transition: all 0.4s;
+}
+/* skills start */
+/* svg */
+#skills {
+    padding: 25px;
+}
+.all-skills-container {
+    margin: 100px;
+}
+.flex-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .single-skill {
+    flex-basis: 25%;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+
+  }
+  .circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    max-height: 250px;
+  }
+  
+  .circle-outer {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+  }
+  
+  .circle-inner {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+  }
+  
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }
+  
+  .circular-chart.blue .circle-inner {
+    stroke: #30bae7;
+  }
+  
+  .circular-chart.pink .circle-inner {
+    stroke: #d74881;
+  }
+  
+  .circular-chart.green .circle-inner {
+    stroke: #15c7a8;
+  }
+  .circular-chart.orange .circle-inner {
+    stroke: #eb7e4c;
+  }
+  .percentage {
+    fill: #666;
+    font-family: sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+  }
+  /* skills end */
+  /* people opinions - start */
+#opinion {
+    background-color: #d74680;
+    color: white; 
+    padding: 25px;
+}
+#opinion > p {
+    text-align: center;
+}
+#all-opinions {
+    display: flex;
+    flex-basis: 50%;
+    flex-wrap: wrap;
+}
+.single-opinion {
+    flex-basis: 50%;
+    padding: 30px;
+  
+}
+.op-photo {
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    float: left;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.op-name {
+    text-transform: uppercase;
+}
+.op-job {
+    color: yellow;
+}
+.photo1 {
+    background-image: url(../img/chanel-iman.jpg);
+}
+.photo2 {
+    background-image: url(../img/adriana-lima);
+}
+.photo3 {
+    background-image: url(../img/Anne-Hathaway.jpg);
+}
+.photo4 {
+    background-image: url(../img/emma-stone.jpg);
+}
+/* people opinions - stop */
+/* form - start */
+
+#form {
+    background-color: #3c5499;
+    margin: 0;
+    padding: 25px;
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
+#form-inner {
+    margin: 50px;
+    box-sizing: border-box;
+}
+#name,
+#email,
+#message{ 
+    background-color: #273a71;
+    margin: 16px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+}
+#message {
+    display: inline-block;
+    width: 99%;
+    height: 200px;
+}
+#name,
+#email {
+    width: 49%;
+    display: inline-block;
+
+}
+#name::-webkit-input-placeholder { color:#fff; }
+#email::-webkit-input-placeholder { color:#fff; }
+#message::-webkit-input-placeholder { color:#fff; }
+/* #name::-moz-placeholder { color:#f00; } 
+#name:-ms-input-placeholder { color:#f00; } */
+
+#form input[type="button"] {
+    width: 200px;
+    height: 50px;
+    align-self: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #30bae7;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px #2d8fbc;
+    text-transform: uppercase;
+}
+#form input[type="button"]:hover {
+    background-color: #009be2;
+}
+#form input[type="button"]:active {
+    background-color: #30bae7;
+    box-shadow: 0 5px #2d8fbc;
+    transform: translateY(4px);
+}
+/* form - stop */
+/* footer - start */
+footer {
+    background-color:#344b8e;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+footer a {
+    color: #fff;
+    font-weight: bold;
+    padding: 25px;
+    font-size: 20px;
+    text-decoration: none;
+}
+footer a:hover {
+    color: blue;
+}
